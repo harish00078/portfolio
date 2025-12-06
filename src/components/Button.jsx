@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 const variants = {
   primary:
-    "bg-brand-600 hover:bg-brand-500 text-slate-950 shadow-glow hover:shadow-glow/80",
+    "bg-brand-600 hover:bg-brand-500 text-slate-950 shadow-md hover:shadow-lg dark:shadow-glow dark:hover:shadow-glow/80",
   ghost:
-    "bg-slate-900/40 hover:bg-slate-800/70 text-slate-100 border border-slate-700 hover:border-brand-500",
+    "bg-slate-50/40 hover:bg-slate-200/70 text-slate-900 border border-slate-200 hover:border-brand-500 dark:bg-slate-900/40 dark:hover:bg-slate-800/70 dark:text-slate-100 dark:border-slate-700",
 };
 
 export function Button({ children, variant = "primary", className = "", icon: Icon, ...rest }) {

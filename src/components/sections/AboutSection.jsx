@@ -10,7 +10,7 @@ export function AboutSection() {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-2xl font-semibold"
+          className="text-2xl font-semibold text-slate-900 dark:text-slate-100"
         >
           About
         </motion.h2>
@@ -19,7 +19,7 @@ export function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
           viewport={{ once: true }}
-          className="mt-4 text-sm text-slate-300 max-w-2xl"
+          className="mt-4 text-sm text-slate-600 dark:text-slate-300 max-w-2xl"
         >
           I&apos;m Harish, a MERN stack developer with a strong interest in
           building interactive, visual experiences. I enjoy connecting clean
@@ -44,12 +44,12 @@ function SkillColumn({ title, items }) {
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4"
+      className="rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900/60 dark:shadow-none p-4 transition-colors duration-300"
     >
-      <h3 className="text-sm font-semibold text-slate-100 mb-2">
+      <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">
         {title}
       </h3>
-      <ul className="space-y-1 text-xs text-slate-300">
+      <ul className="space-y-1 text-xs text-slate-600 dark:text-slate-300">
         {items.map((item) => (
           <li key={item} className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-500" />

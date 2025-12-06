@@ -17,7 +17,7 @@ export default function App() {
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
 
   return (
-    <div className="min-h-full flex flex-col bg-slate-950 text-slate-100">
+    <div className="min-h-full flex flex-col">
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main className="flex-1">
         <HeroSection />

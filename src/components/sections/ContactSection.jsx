@@ -11,7 +11,7 @@ export function ContactSection() {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-2xl font-semibold"
+          className="text-2xl font-semibold text-slate-900 dark:text-slate-100"
         >
           Contact
         </motion.h2>
@@ -20,7 +20,7 @@ export function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
           viewport={{ once: true }}
-          className="mt-3 text-sm text-slate-300 max-w-xl"
+          className="mt-3 text-sm text-slate-600 dark:text-slate-300 max-w-xl"
         >
           Looking for a MERN stack developer or an intern who can ship
           production-ready features and learn fast? Feel free to reach out — 
@@ -32,7 +32,7 @@ export function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15 }}
           viewport={{ once: true }}
-          className="mt-6 rounded-2xl border border-slate-800 bg-slate-900/60 p-4 max-w-md"
+          className="mt-6 rounded-2xl border border-slate-200 bg-white/60 dark:border-slate-800 dark:bg-slate-900/60 p-4 max-w-md transition-colors duration-300"
         >
           <form
             className="space-y-3 text-sm"
@@ -42,32 +42,32 @@ export function ContactSection() {
             }}
           >
             <div>
-              <label className="block text-xs text-slate-400 mb-1">
+              <label className="block text-xs text-slate-600 dark:text-slate-400 mb-1">
                 Your Name
               </label>
               <input
                 type="text"
-                className="w-full rounded-lg border border-slate-700 bg-slate-900/70 px-3 py-2 text-sm text-slate-100 outline-none focus:border-brand-500"
+                className="w-full rounded-lg border border-slate-200 bg-white/70 px-3 py-2 text-sm text-slate-900 outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-100"
                 placeholder="Enter your name"
               />
             </div>
             <div>
-              <label className="block text-xs text-slate-400 mb-1">
+              <label className="block text-xs text-slate-600 dark:text-slate-400 mb-1">
                 Email
               </label>
               <input
                 type="email"
-                className="w-full rounded-lg border border-slate-700 bg-slate-900/70 px-3 py-2 text-sm text-slate-100 outline-none focus:border-brand-500"
+                className="w-full rounded-lg border border-slate-200 bg-white/70 px-3 py-2 text-sm text-slate-900 outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-100"
                 placeholder="Enter your email"
               />
             </div>
             <div>
-              <label className="block text-xs text-slate-400 mb-1">
+              <label className="block text-xs text-slate-600 dark:text-slate-400 mb-1">
                 Message
               </label>
               <textarea
                 rows="4"
-                className="w-full rounded-lg border border-slate-700 bg-slate-900/70 px-3 py-2 text-sm text-slate-100 outline-none focus:border-brand-500"
+                className="w-full rounded-lg border border-slate-200 bg-white/70 px-3 py-2 text-sm text-slate-900 outline-none focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-100"
                 placeholder="Tell me about the opportunity..."
               />
             </div>

@@ -28,7 +28,7 @@ export function SocialLinks({ className = "" }) {
           href={item.href}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-2 text-sm text-slate-300 hover:text-brand-400 transition"
+          className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-400 transition"
         >
           <item.icon className="w-4 h-4" />
           <span>{item.label}</span>
