@@ -14,7 +14,7 @@ const links = [
   },
   {
     label: "Email",
-    href: "mailto:you@example.com",
+    href: "mailto:harishpathania150@gmail.com",
     icon: Mail,
   },
 ];

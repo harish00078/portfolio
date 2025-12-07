@@ -9,6 +9,10 @@ export function HeroSection() {
     const el = document.getElementById("projects");
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
+  const jumpToContact = ()=>{
+    const el = document.getElementById("contact");
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 
   return (
     <section
@@ -60,7 +64,7 @@ export function HeroSection() {
               View Projects
             </Button>
 
-            <Button variant="ghost" className="text-sm">
+            <Button variant="ghost" className="text-sm" onClick={jumpToContact}>
               Contact Me
             </Button>
           </motion.div>
