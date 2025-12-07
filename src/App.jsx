@@ -20,7 +20,7 @@ export default function App() {
   return (
     <div className="min-h-full flex flex-col bg-slate-50 dark:bg-[#0b0b12] transition-colors duration-300 relative">
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <HeroCanvas />
+        <HeroCanvas theme={theme} />
       </div>
       
       <Navbar theme={theme} toggleTheme={toggleTheme} />

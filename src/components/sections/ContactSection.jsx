@@ -38,7 +38,7 @@ export function ContactSection() {
             className="space-y-3 text-sm"
             onSubmit={(e) => {
               e.preventDefault();
-              window.location.href = "mailto:you@example.com";
+              window.location.href = "mailto:harishpathania150@gmail.com";
             }}
           >
             <div>
