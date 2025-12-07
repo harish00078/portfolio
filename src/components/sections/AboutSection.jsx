@@ -49,7 +49,7 @@ function SkillColumn({ title, items }) {
       <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">
         {title}
       </h3>
-      <ul className="space-y-1 text-xs text-slate-600 dark:text-slate-300">
+      <ul className="space-y-1 text-sm text-slate-600 dark:text-slate-300">
         {items.map((item) => (
           <li key={item} className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-500" />

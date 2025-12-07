@@ -15,7 +15,6 @@ export function HeroSection() {
       id="home"
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* === CONTENT === */}
       <div className="relative z-10 mx-auto max-w-6xl px-4 py-10 lg:py-20 grid gap-10 lg:grid-cols-[3fr,2fr] items-center">
         {/* Left Side */}
         <div>
@@ -35,7 +34,8 @@ export function HeroSection() {
             className="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight text-slate-900 dark:text-white drop-shadow-[0_4px_12px_rgba(255,255,255,0.4)] dark:drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)]"
           >
             Crafting modern <span className="text-[#915eff]">MERN</span>{" "}
-            experiences with <span className="text-brand-600 dark:text-brand-300">3D</span>{" "}
+            experiences with{" "}
+            <span className="text-brand-600 dark:text-brand-300">3D</span>{" "}
             precision.
           </motion.h1>
 
@@ -75,33 +75,32 @@ export function HeroSection() {
           </motion.div>
         </div>
 
-        {/* Right Side Card */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9, y: 10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ delay: 0.35 }}
           className="relative h-60 sm:h-72 lg:h-80 hidden lg:block"
         >
-          <div className="absolute inset-0 rounded-3xl bg-white/40 dark:bg-black/40 backdrop-blur-xl border border-slate-200 dark:border-white/10 shadow-2xl overflow-hidden p-6 flex flex-col justify-between">
-            <div>
-              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
-                Interactive 3D Layer
-              </h3>
-              <p className="text-slate-600 dark:text-slate-400 text-sm">
-                Powered by React Three Fiber & GLSL Effects
-              </p>
-            </div>
-
-            <div className="grid grid-cols-3 gap-2 text-[11px] mt-4">
-              <SkillBox
+          <div
+            className="absolute inset-0 rounded-3xl 
+                          bg-white/40 dark:bg-black/40 
+                          backdrop-blur-xl 
+                          border border-slate-200 dark:border-white/10 
+                          shadow-2xl overflow-hidden 
+                          p-6 flex flex-col justify-center"
+          >
+            <div className="grid grid-cols-3 gap-4 mt-4">
+              <SkillBox3D
                 title="Frontend"
                 items={["React", "Vite", "Tailwind"]}
               />
-              <SkillBox
+
+              <SkillBox3D
                 title="Backend"
                 items={["Node", "Express", "MongoDB"]}
               />
-              <SkillBox title="3D" items={["Three.js", "R3F", "Shaders"]} />
+
+              <SkillBox3D title="3D" items={["Three.js", "R3F", "Shaders"]} />
             </div>
           </div>
         </motion.div>
@@ -122,11 +121,31 @@ export function HeroSection() {
   );
 }
 
-function SkillBox({ title, items }) {
+function SkillBox3D({ title, items }) {
   return (
-    <div className="bg-white/60 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl p-2">
-      <div className="text-slate-700 dark:text-slate-300 font-medium">{title}</div>
-      <div className="text-slate-500 dark:text-slate-100 text-[10px]">{items.join(", ")}</div>
-    </div>
+    <motion.div
+      whileHover={{
+        scale: 1.07,
+        rotateX: 10,
+        rotateY: -10,
+        boxShadow: "0 20px 40px rgba(0,0,0,0.35)",
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 180,
+        damping: 14,
+      }}
+      className="bg-white/50 dark:bg-white/10 
+                 backdrop-blur-lg border border-white/40 dark:border-white/20
+                 rounded-xl p-3 cursor-pointer transform-gpu"
+    >
+      <h3 className="font-semibold text-slate-900 dark:text-white text-base">
+        {title}
+      </h3>
+
+      <p className="text-slate-800 dark:text-slate-200 text-sm mt-1 leading-relaxed">
+        {items.join(", ")}
+      </p>
+    </motion.div>
   );
 }
