@@ -43,7 +43,7 @@ export function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex items-stretch bg-slate-50 dark:bg-slate-950 transition-colors duration-300"
+      className="min-h-screen flex items-stretch transition-colors duration-300"
     >
       <div className="relative mx-auto max-w-6xl px-0 sm:px-4 py-10 flex-1 flex flex-col">
         <div className="px-4">

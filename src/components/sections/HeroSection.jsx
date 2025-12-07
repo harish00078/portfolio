@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Button } from "../Button";
 import { SocialLinks } from "../SocialLinks";
 import { ArrowRight } from "lucide-react";
-import HeroCanvas from "../3d/HeroCanvas";
 
 export function HeroSection() {
   const scrollToProjects = () => {
@@ -14,16 +13,8 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden bg-slate-50 dark:bg-[#0b0b12]"
+      className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* === 3D Background === */}
-      <div className="absolute inset-0 pointer-events-none opacity-90">
-        <HeroCanvas />
-      </div>
-
-      {/* Blur + Dark Gradient Overlay for readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/20 to-white/80 dark:from-black/60 dark:via-black/20 dark:to-black/80 backdrop-blur-[2px]" />
-
       {/* === CONTENT === */}
       <div className="relative z-10 mx-auto max-w-6xl px-4 py-10 lg:py-20 grid gap-10 lg:grid-cols-[3fr,2fr] items-center">
         {/* Left Side */}
