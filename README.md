@@ -45,8 +45,8 @@ Follow these steps to set up the project locally.
 
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/your-username/harish-dev-portfolio-p2.git](https://github.com/your-username/harish-dev-portfolio-p2.git)
-    cd harish-dev-portfolio-p2
+    git clone [https://github.com/harish00078/portfolio.git](https://github.com/harish00078/portfolio.git)
+    cd portfolio
     ```
 
 2.  **Install dependencies**
